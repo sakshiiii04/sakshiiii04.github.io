@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,38 +17,45 @@
 
         body {
             font-family: Arial, sans-serif;
-            background: #0f172a;
-            color: #e2e8f0;
+            background: #f7f9fc;
+            color: #1f2937;
             line-height: 1.6;
         }
 
-        nav {
+        header {
+            background: #111827;
+            color: white;
+            padding: 18px 8%;
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: #111827;
-            padding: 18px 8%;
+        }
+
+        nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid #334155;
         }
 
         .logo {
             font-size: 24px;
             font-weight: bold;
-            color: #38bdf8;
         }
 
-        nav a {
-            color: #e2e8f0;
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
             text-decoration: none;
-            margin-left: 25px;
             font-size: 15px;
         }
 
-        nav a:hover {
-            color: #38bdf8;
+        nav ul li a:hover {
+            color: #60a5fa;
         }
 
         .hero {
@@ -56,28 +64,27 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 40px 8%;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #e0f2fe, #f8fafc);
         }
 
         .hero h1 {
-            font-size: 55px;
-            margin-bottom: 15px;
-        }
-
-        .hero h1 span {
-            color: #38bdf8;
+            font-size: 52px;
+            color: #111827;
+            margin-bottom: 10px;
         }
 
         .hero h2 {
-            color: #94a3b8;
-            font-weight: normal;
+            color: #2563eb;
+            font-size: 25px;
             margin-bottom: 20px;
         }
 
         .hero p {
             max-width: 700px;
             margin: auto;
-            color: #cbd5e1;
+            font-size: 18px;
+            color: #4b5563;
         }
 
         .buttons {
@@ -86,129 +93,128 @@
 
         .btn {
             display: inline-block;
-            padding: 12px 24px;
-            margin: 8px;
+            padding: 12px 22px;
+            margin: 6px;
             border-radius: 8px;
             text-decoration: none;
-            background: #38bdf8;
-            color: #0f172a;
             font-weight: bold;
+            background: #2563eb;
+            color: white;
         }
 
-        .btn.secondary {
-            background: transparent;
-            border: 1px solid #38bdf8;
-            color: #38bdf8;
+        .btn:hover {
+            background: #1d4ed8;
         }
 
         section {
-            padding: 80px 8%;
+            padding: 70px 8%;
         }
 
-        .section-title {
+        section h2 {
             text-align: center;
-            font-size: 34px;
-            margin-bottom: 45px;
-            color: #38bdf8;
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: #111827;
         }
 
         .about {
             max-width: 850px;
             margin: auto;
             text-align: center;
-            color: #cbd5e1;
+            font-size: 17px;
         }
 
         .skills {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            max-width: 900px;
+            margin: auto;
         }
 
-        .skill-card,
-        .project-card,
-        .training-card,
-        .education-card {
-            background: #1e293b;
+        .skill {
+            background: white;
+            padding: 12px 18px;
+            border-radius: 25px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+            font-weight: bold;
+        }
+
+        .education,
+        .experience,
+        .projects {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .card {
+            background: white;
             padding: 25px;
-            border-radius: 12px;
-            border: 1px solid #334155;
-        }
-
-        .skill-card h3,
-        .project-card h3,
-        .training-card h3,
-        .education-card h3 {
-            color: #38bdf8;
-            margin-bottom: 12px;
-        }
-
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-
-        .project-card p {
-            color: #cbd5e1;
-            margin-bottom: 15px;
-        }
-
-        .tech {
-            color: #7dd3fc;
-            font-size: 14px;
-        }
-
-        .training-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .education-card {
-            max-width: 750px;
-            margin: auto;
             margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
         }
 
-        .certifications {
-            max-width: 700px;
-            margin: auto;
+        .card h3 {
+            color: #2563eb;
+            margin-bottom: 8px;
         }
 
-        .certifications li {
-            margin: 12px 0;
-            color: #cbd5e1;
+        .card ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .project-links {
+            margin-top: 15px;
         }
 
         .contact {
             text-align: center;
+            background: #111827;
+            color: white;
         }
 
-        .contact p {
-            margin: 10px;
-            color: #cbd5e1;
+        .contact h2 {
+            color: white;
+        }
+
+        .contact a {
+            color: #93c5fd;
+            text-decoration: none;
         }
 
         footer {
             text-align: center;
-            padding: 25px;
-            background: #111827;
-            color: #94a3b8;
+            padding: 20px;
+            background: #030712;
+            color: #d1d5db;
         }
 
-        @media (max-width: 700px) {
+        @media (max-width: 768px) {
+
             nav {
                 flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
                 gap: 12px;
             }
 
-            nav a {
-                margin: 5px;
+            .hero h1 {
+                font-size: 38px;
             }
 
-            .hero h1 {
-                font-size: 40px;
+            .hero h2 {
+                font-size: 20px;
+            }
+
+            section {
+                padding: 50px 5%;
             }
         }
     </style>
@@ -216,346 +222,354 @@
 
 <body>
 
-    <!-- Navigation -->
+<header>
     <nav>
         <div class="logo">Sakshi Pandey</div>
 
-        <div>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#training">Training</a>
-            <a href="#education">Education</a>
-            <a href="#contact">Contact</a>
-        </div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
+</header>
 
 
-    <!-- Home -->
-    <section class="hero">
+<section class="hero">
 
-        <div>
-            <h1>Hi, I'm <span>Sakshi Pandey</span></h1>
+    <div>
 
-            <h2>
-                Electronics & Communication Engineering Student
-            </h2>
+        <h1>Hi, I'm Sakshi Pandey</h1>
+
+        <h2>ECE Student | Embedded Systems | VLSI | Flutter Developer</h2>
+
+        <p>
+            Electronics & Communication Engineering student interested in
+            Embedded Systems, VLSI, Python and software development.
+            I enjoy building practical technology projects and learning
+            new technologies.
+        </p>
+
+        <div class="buttons">
+
+            <a class="btn" href="#projects">
+                View My Projects
+            </a>
+
+            <a class="btn" href="#contact">
+                Contact Me
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="about">
+
+    <h2>About Me</h2>
+
+    <div class="about">
+
+        <p>
+            I am a B.Tech Electronics & Communication Engineering student
+            with an interest in both hardware and software technologies.
+            My learning areas include Embedded Systems, VLSI, Python,
+            Flutter and frontend development.
+        </p>
+
+        <br>
+
+        <p>
+            I have worked on academic and practical projects involving
+            biometric security, AI-based audio detection and mobile
+            application development. I am continuously improving my
+            technical and problem-solving skills.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section id="skills">
+
+    <h2>Technical Skills</h2>
+
+    <div class="skills">
+
+        <div class="skill">Python</div>
+        <div class="skill">Embedded C</div>
+        <div class="skill">Arduino</div>
+        <div class="skill">VLSI</div>
+        <div class="skill">Verilog</div>
+        <div class="skill">Digital Electronics</div>
+        <div class="skill">Flutter</div>
+        <div class="skill">Dart</div>
+        <div class="skill">Frontend Development</div>
+        <div class="skill">Git & GitHub</div>
+        <div class="skill">Android Studio</div>
+        <div class="skill">Arduino IDE</div>
+
+    </div>
+
+</section>
+
+
+<section id="education">
+
+    <h2>Education</h2>
+
+    <div class="education">
+
+        <div class="card">
+
+            <h3>B.Tech – Electronics & Communication Engineering</h3>
 
             <p>
-                Interested in VLSI, Embedded Systems, Electronics,
-                Python and Software Development.
-            </p>
-
-            <div class="buttons">
-                <a href="#projects" class="btn">View My Projects</a>
-
-                <a href="#contact" class="btn secondary">
-                    Contact Me
-                </a>
-            </div>
-        </div>
-
-    </section>
-
-
-    <!-- About -->
-    <section id="about">
-
-        <h2 class="section-title">About Me</h2>
-
-        <div class="about">
-
-            <p>
-                I am a B.Tech student in Electronics and Communication
-                Engineering at United Institute of Technology, Prayagraj.
-                I am currently exploring both core ECE technologies and
-                software development.
-            </p>
-
-            <br>
-
-            <p>
-                My areas of interest include Embedded Systems, VLSI,
-                Digital Electronics, Python and Flutter development.
-                I enjoy working on practical projects that combine
-                electronics and technology.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- Skills -->
-    <section id="skills">
-
-        <h2 class="section-title">Technical Skills</h2>
-
-        <div class="skills">
-
-            <div class="skill-card">
-                <h3>Programming</h3>
-                <p>Python, Embedded C, Dart</p>
-            </div>
-
-            <div class="skill-card">
-                <h3>Development</h3>
-                <p>Flutter, FastAPI</p>
-            </div>
-
-            <div class="skill-card">
-                <h3>Electronics</h3>
-                <p>Analog Electronics, Digital Electronics, Embedded Systems</p>
-            </div>
-
-            <div class="skill-card">
-                <h3>VLSI</h3>
-                <p>CMOS Design, Digital Circuit Design, VLSI Fundamentals</p>
-            </div>
-
-            <div class="skill-card">
-                <h3>Tools</h3>
-                <p>Arduino IDE, Git, GitHub</p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Projects -->
-    <section id="projects">
-
-        <h2 class="section-title">Projects</h2>
-
-        <div class="project-grid">
-
-            <div class="project-card">
-
-                <h3>Fingerprint-Based Smart Door Lock System</h3>
-
-                <p>
-                    Developed a biometric smart door lock system using
-                    Arduino Uno, R307 Fingerprint Sensor and Embedded C
-                    for secure user authentication.
-                </p>
-
-                <p>
-                    Integrated a Relay Module, 12V Solenoid Lock and
-                    Buzzer to control access for authorized users.
-                </p>
-
-                <div class="tech">
-                    Arduino Uno • Embedded C • R307 • Relay •
-                    Solenoid Lock • Buzzer
-                </div>
-
-            </div>
-
-
-            <div class="project-card">
-
-                <h3>AI-Generated Audio Detection System</h3>
-
-                <p>
-                    Developed the Flutter frontend for audio recording,
-                    uploading, navigation and detection-result display.
-                </p>
-
-                <p>
-                    Integrated the frontend with backend APIs to process
-                    audio and display AI-generated audio detection results.
-                </p>
-
-                <div class="tech">
-                    Flutter • Dart • FastAPI • Python • Git
-                </div>
-
-            </div>
-
-
-            <div class="project-card">
-
-                <h3>Smart Agriculture Application</h3>
-
-                <p>
-                    Worked on a Flutter-based smart agriculture application
-                    designed to provide useful agriculture-related features
-                    through a mobile interface.
-                </p>
-
-                <p>
-                    Contributed to the frontend development, user interface
-                    and application flow.
-                </p>
-
-                <div class="tech">
-                    Flutter • Dart • Android Studio
-                </div>
-
-            </div>
-
-
-            <div class="project-card">
-
-                <h3>Frontend / Developer Work</h3>
-
-                <p>
-                    Worked on frontend development and user-interface
-                    implementation for application-based projects.
-                </p>
-
-                <p>
-                    Focused on screen design, navigation, user interaction
-                    and connecting frontend components with backend APIs.
-                </p>
-
-                <div class="tech">
-                    Flutter • Dart • API Integration
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Training -->
-    <section id="training">
-
-        <h2 class="section-title">Training & Experience</h2>
-
-        <div class="training-grid">
-
-            <div class="training-card">
-                <h3>Python Trainee</h3>
-                <p>
-                    Learned Python programming fundamentals,
-                    Object-Oriented Programming and basic application
-                    development.
-                </p>
-            </div>
-
-            <div class="training-card">
-                <h3>Embedded Systems Trainee</h3>
-                <p>
-                    Gained hands-on experience with Arduino,
-                    microcontrollers, sensors and hardware interfacing.
-                </p>
-            </div>
-
-            <div class="training-card">
-                <h3>VLSI Trainee</h3>
-                <p>
-                    Learned CMOS design, digital circuit design,
-                    VLSI fundamentals and basic VLSI design flow.
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Education -->
-    <section id="education">
-
-        <h2 class="section-title">Education</h2>
-
-        <div class="education-card">
-
-            <h3>United Institute of Technology, Prayagraj</h3>
-
-            <p>
-                Bachelor of Technology in Electronics & Communication
-                Engineering
+                United Institute of Technology, Prayagraj
             </p>
 
             <p>
-                2024 – 2028 | Third Year | SGPA: 7.2
+                Currently pursuing B.Tech
             </p>
 
         </div>
 
 
-        <div class="education-card">
+        <div class="card">
 
-            <h3>B.N.T. Inter College, Prayagraj</h3>
-
-            <p>
-                Class XII | 2023 | 65%
-            </p>
+            <h3>Senior Secondary (12th)</h3>
 
             <p>
-                Class X | 2021 | 82.9%
+                B.N.T. Inter College, Prayagraj
             </p>
 
         </div>
 
-    </section>
+
+        <div class="card">
+
+            <h3>Secondary (10th)</h3>
+
+            <p>
+                B.N.T. Inter College, Prayagraj
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
 
 
-    <!-- Certifications -->
-    <section>
+<section id="experience">
 
-        <h2 class="section-title">
-            Certifications & Achievements
-        </h2>
+    <h2>Training & Experience</h2>
 
-        <div class="certifications">
+    <div class="experience">
+
+        <div class="card">
+
+            <h3>Python Trainee</h3>
 
             <ul>
-                <li>Python Programming Certification</li>
-
-                <li>Embedded Systems Training Certification</li>
-
-                <li>Android Development Training Certification</li>
-
-                <li>Participant – SRM University National Level Hackathon</li>
+                <li>Learned Python programming fundamentals.</li>
+                <li>Worked with object-oriented programming concepts.</li>
+                <li>Developed basic Python applications and problem-solving skills.</li>
             </ul>
 
         </div>
 
-    </section>
+
+        <div class="card">
+
+            <h3>Embedded Systems Trainee</h3>
+
+            <ul>
+                <li>Gained hands-on experience with Arduino and microcontrollers.</li>
+                <li>Worked with sensors and hardware interfacing.</li>
+                <li>Learned embedded programming and hardware integration.</li>
+            </ul>
+
+        </div>
 
 
-    <!-- Contact -->
-    <section id="contact">
+        <div class="card">
 
-        <h2 class="section-title">Contact Me</h2>
+            <h3>VLSI Trainee</h3>
 
-        <div class="contact">
+            <ul>
+                <li>Learned digital circuit and CMOS design fundamentals.</li>
+                <li>Studied basic VLSI design flow.</li>
+                <li>Gained exposure to EDA tools and VLSI concepts.</li>
+            </ul>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Flutter / Frontend Developer</h3>
+
+            <ul>
+                <li>Developed frontend screens using Flutter.</li>
+                <li>Worked on audio upload and recording interfaces.</li>
+                <li>Integrated frontend screens with backend APIs.</li>
+                <li>Worked on application navigation and result display.</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="projects">
+
+    <h2>Projects</h2>
+
+    <div class="projects">
+
+
+        <div class="card">
+
+            <h3>1. Fingerprint-Based Smart Door Lock System</h3>
+
+            <ul>
+                <li>
+                    Developed a biometric door lock system using Arduino Uno,
+                    R307 fingerprint sensor and Embedded C.
+                </li>
+
+                <li>
+                    Integrated Relay Module, 12V Solenoid Lock and Buzzer
+                    for secure access control.
+                </li>
+            </ul>
 
             <p>
-                📧 ssakshi1234@gmail.com
-            </p>
-
-            <p>
-                📱 +91 8840979128
-            </p>
-
-            <p>
-                GitHub: sakshiiii04
-            </p>
-
-            <p>
-                LinkedIn: Sakshi Pandey
+                <strong>Technologies:</strong>
+                Arduino Uno, Embedded C, Arduino IDE,
+                R307 Fingerprint Sensor, Relay Module,
+                Solenoid Lock, Buzzer
             </p>
 
         </div>
 
-    </section>
+
+        <div class="card">
+
+            <h3>2. AI-Generated Audio Detection System</h3>
+
+            <ul>
+                <li>
+                    Developed the Flutter frontend for audio upload,
+                    recording, navigation and result display.
+                </li>
+
+                <li>
+                    Integrated frontend screens with backend APIs
+                    for AI-generated audio detection.
+                </li>
+            </ul>
+
+            <p>
+                <strong>Technologies:</strong>
+                Flutter, Dart, Python, FastAPI, Git, GitHub
+            </p>
+
+        </div>
 
 
-    <!-- Footer -->
-    <footer>
+        <div class="card">
 
-        <p>
-            © 2026 Sakshi Pandey. All Rights Reserved.
-        </p>
+            <h3>3. Smart Agriculture Application</h3>
 
-    </footer>
+            <ul>
+                <li>
+                    Worked on a Flutter-based smart agriculture application.
+                </li>
+
+                <li>
+                    Developed application screens and frontend functionality.
+                </li>
+
+                <li>
+                    Worked with image upload and application interface
+                    for the project.
+                </li>
+            </ul>
+
+            <p>
+                <strong>Technologies:</strong>
+                Flutter, Dart, Android Studio
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="contact" class="contact">
+
+    <h2>Let's Connect</h2>
+
+    <p>
+        I am open to learning opportunities, internships,
+        projects and technology-related collaborations.
+    </p>
+
+    <br>
+
+    <!-- Replace the links below with your actual profiles -->
+
+    <p>
+        Email:
+        <a href="mailto:YOUR_EMAIL@gmail.com">
+            YOUR_EMAIL@gmail.com
+        </a>
+    </p>
+
+    <p>
+        GitHub:
+        <a href="https://github.com/sakshiiii04" target="_blank">
+            github.com/sakshiiii04
+        </a>
+    </p>
+
+    <p>
+        LinkedIn:
+        <a href="YOUR_LINKEDIN_LINK" target="_blank">
+            LinkedIn Profile
+        </a>
+    </p>
+
+    <p>
+        LeetCode:
+        <a href="YOUR_LEETCODE_LINK" target="_blank">
+            LeetCode Profile
+        </a>
+    </p>
+
+</section>
+
+
+<footer>
+
+    <p>
+        © 2026 Sakshi Pandey. All Rights Reserved.
+    </p>
+
+</footer>
 
 </body>
 </html>
