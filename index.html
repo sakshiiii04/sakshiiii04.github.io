@@ -57,14 +57,44 @@
             color: #60a5fa;
         }
 
+        /* Hero Section */
         .hero {
             min-height: 90vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            text-align: center;
-            padding: 50px 20px;
+            padding: 50px 8%;
             background: linear-gradient(135deg, #e0f2fe, #f8fafc);
+        }
+
+        .hero-container {
+            width: 100%;
+            max-width: 1100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .hero-content {
+            flex: 1;
+            text-align: left;
+        }
+
+        .hero-photo {
+            flex: 0 0 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-photo img {
+            width: 280px;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 6px solid white;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
         }
 
         .hero h1 {
@@ -81,7 +111,6 @@
 
         .hero p {
             max-width: 700px;
-            margin: auto;
             font-size: 18px;
             color: #4b5563;
         }
@@ -128,7 +157,7 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 12px;
-            max-width: 900px;
+            max-width: 950px;
             margin: auto;
         }
 
@@ -136,7 +165,7 @@
             background: white;
             padding: 12px 18px;
             border-radius: 25px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
             font-weight: bold;
         }
 
@@ -152,7 +181,7 @@
             padding: 25px;
             margin-bottom: 20px;
             border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
         }
 
         .card h3 {
@@ -163,10 +192,6 @@
         .card ul {
             margin-left: 20px;
             margin-top: 10px;
-        }
-
-        .project-links {
-            margin-top: 15px;
         }
 
         .contact {
@@ -195,6 +220,7 @@
             color: #d1d5db;
         }
 
+        /* Mobile Responsive */
         @media (max-width: 768px) {
 
             nav {
@@ -206,6 +232,33 @@
                 flex-wrap: wrap;
                 justify-content: center;
                 gap: 12px;
+            }
+
+            .hero {
+                padding: 50px 5%;
+            }
+
+            .hero-container {
+                flex-direction: column-reverse;
+                text-align: center;
+                gap: 30px;
+            }
+
+            .hero-content {
+                text-align: center;
+            }
+
+            .hero p {
+                margin: auto;
+            }
+
+            .hero-photo {
+                flex: none;
+            }
+
+            .hero-photo img {
+                width: 210px;
+                height: 210px;
             }
 
             .hero h1 {
@@ -246,34 +299,48 @@
 <!-- Hero Section -->
 <section class="hero">
 
-    <div>
+    <div class="hero-container">
 
-        <h1>Hi, I'm Sakshi Pandey</h1>
+        <div class="hero-content">
 
-        <h2>
-            ECE Student | Embedded Systems | VLSI | Flutter Developer
-        </h2>
+            <h1>Hi, I'm Sakshi Pandey</h1>
 
-        <p>
-            Electronics & Communication Engineering student interested in
-            Embedded Systems, VLSI, Python and software development.
-            I enjoy building practical technology projects and learning
-            new technologies.
-        </p>
+            <h2>
+                ECE Student | Embedded Systems | VLSI | Flutter Developer
+            </h2>
 
-        <div class="buttons">
+            <p>
+                Electronics & Communication Engineering student interested in
+                Embedded Systems, VLSI, Python and software development.
+                I enjoy building practical technology projects and learning
+                new technologies.
+            </p>
 
-            <a class="btn" href="#projects">
-                View My Projects
-            </a>
+            <div class="buttons">
 
-            <a class="btn" href="#contact">
-                Contact Me
-            </a>
+                <a class="btn" href="#projects">
+                    View My Projects
+                </a>
 
-            <a class="btn" href="Sakshi_Pandey_Resume.pdf" target="_blank">
-                Download Resume
-            </a>
+                <a class="btn" href="#contact">
+                    Contact Me
+                </a>
+
+                <a class="btn" href="Sakshi_Pandey_Resume.pdf" target="_blank">
+                    Download Resume
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-photo">
+
+            <img
+                src="sakshi-photo.jpg"
+                alt="Sakshi Pandey"
+            >
 
         </div>
 
@@ -319,9 +386,12 @@
 
         <div class="skill">Python</div>
         <div class="skill">Embedded C</div>
+        <div class="skill">Embedded Systems</div>
         <div class="skill">Arduino</div>
         <div class="skill">VLSI</div>
+        <div class="skill">CMOS Design</div>
         <div class="skill">Verilog</div>
+        <div class="skill">EDA Tools</div>
         <div class="skill">Digital Electronics</div>
         <div class="skill">Flutter</div>
         <div class="skill">Dart</div>
